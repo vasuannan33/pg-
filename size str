@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    char str[] = "Hello, World!";
+    int size = 0;
+    while (str[size] != '\0') {
+        size++;
+    }
+
+    printf("Size of the string: %d\n", size);
+
+    return 0;
+}
