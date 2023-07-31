@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int num_terms, i;
+    long long int fib_term, prev_term, curr_term;
+
+    printf("Enter the number of terms for the Fibonacci series: ");
+    scanf("%d", &num_terms);
+
+    prev_term = 0; // First term
+    curr_term = 1; // Second term
+
+    printf("Fibonacci series up to %d terms:\n", num_terms);
+    printf("%lld ", prev_term); // Print the first term
+
+    for (i = 1; i < num_terms; i++) {
+        printf("%lld ", curr_term);
+        fib_term = prev_term + curr_term;
+        prev_term = curr_term;
+        curr_term = fib_term;
+    }
+
+    printf("\n");
+
+    return 0;
+}
